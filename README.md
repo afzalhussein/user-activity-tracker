@@ -1,4 +1,5 @@
 # 🧠 User Activity Tracker – React `useEffect` Example
+![image](https://github.com/user-attachments/assets/90ecc844-d119-4909-95ba-870927d50873)
 
 This project demonstrates various use cases of the `useEffect` hook in React, including:
 

@@ -11,7 +11,7 @@ export default function ActivityLogger () {
         setClicks( prevClicks => prevClicks + 1 );
     };
     return (
-        <div onClick={handleClick} style={{ border: '1px solid #ccc', padding: '10px', marginTop: '10px' }}>
+        <div onClick={ handleClick } className="p-4 bg-gray-100 dark:bg-gray-800 text-black dark:text-white">
             <h3>Activity Logger</h3>
             <p>User has clicked { clicks } times.</p>
             <p><em>(Click anywhere in this box)</em></p>

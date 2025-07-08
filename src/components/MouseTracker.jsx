@@ -17,7 +17,7 @@ export default function MouseTracker () {
     }, [] );
 
     return (
-        <div>
+        <div className="p-4 bg-gray-100 dark:bg-gray-800 text-black dark:text-white">
             <h3>Mouse Tracker</h3>
             <p>Mouse Position: X: { position.x }, Y: { position.y }</p>
         </div>

@@ -1,27 +1,44 @@
-// src/components/UserInfoLoader.jsx
 import React, { useState, useEffect } from 'react';
 
-export default function UserInfoLoader () {
+const UserInfoLoader = () => {
     const [ user, setUser ] = useState( null );
     const [ loading, setLoading ] = useState( true );
 
     useEffect( () => {
-        console.log( 'Fetching user data...' );
-        fetch( 'https://jsonplaceholder.typicode.com/users/1 ' )
-            .then( res => res.json() )
-            .then( data => {
+        const fetchUser = async () => {
+            try {
+                const response = await fetch( 'https://jsonplaceholder.typicode.com/users/1' );
+                const data = await response.json();
                 setUser( data );
                 setLoading( false );
-            } );
+            } catch ( error ) {
+                console.error( 'Error fetching user:', error );
+                setLoading( false );
+            }
+        };
+        fetchUser();
     }, [] );
 
-    if ( loading ) return <p>Loading user info...</p>;
+    if ( loading ) {
+        return (
+            <div className="p-4 bg-gray-100 dark:bg-gray-800 text-black dark:text-white">
+                <h3>User Info</h3>
+                <p>Loading user info...</p>
+            </div>
+        );
+    }
 
     return (
-        <div>
+        <div className="p-4 bg-gray-100 dark:bg-gray-800 text-black dark:text-white">
             <h3>User Info</h3>
-            <p><strong>Name:</strong> { user.name }</p>
-            <p><strong>Email:</strong> { user.email }</p>
+            <p>
+                <strong>Name:</strong> { user.name }
+            </p>
+            <p>
+                <strong>Email:</strong> { user.email }
+            </p>
         </div>
     );
-}
+};
+
+export default UserInfoLoader;

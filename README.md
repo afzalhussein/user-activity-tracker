@@ -2,6 +2,14 @@
 
 This project demonstrates various use cases of the `useEffect` hook in React, styled with Tailwind CSS. It includes a dark mode toggle and tracks user activity such as mouse movement, idle time, and click count, showcasing side effect management in functional components.
 
+## Light mode
+
+![image](https://github.com/user-attachments/assets/43da4c45-42c4-4328-ace2-d279c9672aaf)
+
+## Dark mode
+
+![image](https://github.com/user-attachments/assets/e70826a7-30a3-41ab-9e13-f66704e4ec36)
+
 ## 🧩 Project Overview
 
 A simple React app that tracks user activity using `useEffect` for:

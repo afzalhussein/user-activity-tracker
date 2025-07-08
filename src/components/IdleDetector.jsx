@@ -26,7 +26,7 @@ export default function IdleDetector () {
     }, [] );
 
     return (
-        <div>
+        <div className="p-4 bg-gray-100 dark:bg-gray-800 text-black dark:text-white">
             <h3>User Status</h3>
             <p>{ isIdle ? 'You are idle.' : 'You are active.' }</p>
         </div>

@@ -18,7 +18,7 @@ export default function UserInfoLoader () {
     if ( loading ) return <p>Loading user info...</p>;
 
     return (
-        <div>
+        <div className="p-4 bg-gray-100 dark:bg-gray-800 text-black dark:text-white">
             <h3>User Info</h3>
             <p><strong>Name:</strong> { user.name }</p>
             <p><strong>Email:</strong> { user.email }</p>
